@@ -15,12 +15,12 @@ remote_theme           : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
+locale                   : "ja_JP"
+title                    : "東洋インターネットサービス株式会社　デベロッパーグルーブブログ"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "東洋DEV"
+description              : "東洋インターネットサービス株式会社　デベロッパーグルーブブログ"
 #url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #baseurl                  : # the subpath of your site, e.g. "/blog"
 url                      : "https://tyis.github.io"
@@ -109,10 +109,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "東洋DEV"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "デベロッパーの悩み事を共有しております。"
+  location         : "神奈川県横浜市"
   email            :
   links:
     - label: "Email"
