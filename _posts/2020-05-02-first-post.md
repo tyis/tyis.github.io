@@ -5,4 +5,5 @@ categories: テスト
 ---
 
 テストポスティングです。
+イメージがちゃんと表示されるか確認します。
 ![useful image]({{ site.url }}/assets/image.png)
