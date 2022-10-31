@@ -28,6 +28,7 @@ published: true
 > NEC Bootstrap Software, Version 6.0
 > Copyright © NEC Corporation 2001-2014   . All rights reserved.
 > boot[0]>  
+> 
 1. **スーパーリセット実行**
 ccコマンドを実行し、スタートアップコンフィグを削除します。
 > boot[0]> cc　＜－－Enter
@@ -36,7 +37,8 @@ ccコマンドを実行し、スタートアップコンフィグを削除しま
 > 
 > NEC Bootstrap Software, Version 6.0
 > Copyright © NEC Corporation 2001-2014   . All rights reserved.
-> boot[0]>   
+> boot[0]>
+>
 1. **プログラムファイルの起動**
 bコマンドを実行し、プログラムファイルのロードを開始します 。
 > boot[0]>b 　　＜－－Enter
@@ -49,4 +51,6 @@ bコマンドを実行し、プログラムファイルのロードを開始し�
 > <省略>
 > 
 > Router# 
+>
+
 ## 初期化完了！
