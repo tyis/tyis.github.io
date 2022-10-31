@@ -1,6 +1,6 @@
 ---
 title: "Windows ７のインストール用のブータブルUSBの作り方"
-date: 2012-02-14 09:25:00 +0900
+date: 2019-08-10 09:25:00 +0900
 categories: 
 published: true
 ---
