@@ -20,40 +20,33 @@ published: true
 本製品にローカルコンソールを接続した状態で、電源スイッチをONにします。
 1. **ブートモニタモードへの移行**
 プログラムファイルのロード中を示す文字「##」が出力されている途中でCtrl+cを入力し、ブートモニタモードに移行します。
-```
-    NEC Bootstrap SoftwareCopyright
-    © NEC Corporation 2001-2014   . All rights reserved.
-
-    %BOOT-INFO: Trying flash load, exec-image [ix2215-ms-  9.0.9.ldc].
-    Loading: #########　　　＜－－－Ctrl+Cを入力
-    NEC Bootstrap Software, Version 6.0
-    Copyright © NEC Corporation 2001-2014   . All rights reserved.
-    boot[0]>  
-```
+> NEC Bootstrap SoftwareCopyright
+> © NEC Corporation 2001-2014   . All rights reserved.
+> 
+> %BOOT-INFO: Trying flash load, exec-image [ix2215-ms-  9.0.9.ldc].
+> Loading: #########　　　＜－－－Ctrl+Cを入力
+> NEC Bootstrap Software, Version 6.0
+> Copyright © NEC Corporation 2001-2014   . All rights reserved.
+> boot[0]>  
 1. **スーパーリセット実行**
 ccコマンドを実行し、スタートアップコンフィグを削除します。
-```
-boot[0]> cc　＜－－Enter
-Enter “Y” to clear startup configuration: y
-% Startup configuration is cleared.
-
-NEC Bootstrap Software, Version 6.0
-Copyright © NEC Corporation 2001-2014   . All rights reserved.
-boot[0]>   
-```
+> boot[0]> cc　＜－－Enter
+> Enter “Y” to clear startup configuration: y
+> % Startup configuration is cleared.
+> 
+> NEC Bootstrap Software, Version 6.0
+> Copyright © NEC Corporation 2001-2014   . All rights reserved.
+> boot[0]>   
 1. **プログラムファイルの起動**
 bコマンドを実行し、プログラムファイルのロードを開始します 。
-```
-boot[0]>b 　　＜－－Enter
-NEC Bootstrap Software
-Copyright © NEC Corporation 2001-2014   . All rights reserved.
-
-%BOOT-INFO: Trying flash load, exec-image [ix2215-ms-  9.0.9.ldc].
-Loading: ##################################### [OK]
-
-<省略>
-
-Router# 
-```
-
+> boot[0]>b 　　＜－－Enter
+> NEC Bootstrap Software
+> Copyright © NEC Corporation 2001-2014   . All rights reserved.
+> 
+> %BOOT-INFO: Trying flash load, exec-image [ix2215-ms-  9.0.9.ldc].
+> Loading: ##################################### [OK]
+> 
+> <省略>
+> 
+> Router# 
 ## 初期化完了！
