@@ -30,7 +30,9 @@ published: true
 > boot[0]>  
 > 
 1. **スーパーリセット実行**
+
 ccコマンドを実行し、スタートアップコンフィグを削除します。
+
 > boot[0]> cc　＜－－Enter
 > Enter “Y” to clear startup configuration: y
 > % Startup configuration is cleared.
