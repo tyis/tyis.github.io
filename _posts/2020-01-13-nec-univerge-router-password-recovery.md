@@ -43,7 +43,6 @@ Enter “Y” to clear startup configuration: y
 NEC Bootstrap Software, Version 6.0
 Copyright © NEC Corporation 2001-2014. All rights reserved.
 boot[0]>
->
 ```
 4. **プログラムファイルの起動**
 
@@ -59,6 +58,5 @@ Loading: ##################################### [OK]
 <省略>
 
 Router# 
->
 ```
 ## 初期化完了！
