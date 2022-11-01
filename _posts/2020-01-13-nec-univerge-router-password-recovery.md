@@ -32,7 +32,7 @@ published: true
 1. **スーパーリセット実行**
 
 ccコマンドを実行し、スタートアップコンフィグを削除します。
-
+```
 > boot[0]> cc　＜－－Enter
 > Enter “Y” to clear startup configuration: y
 > % Startup configuration is cleared.
@@ -41,6 +41,7 @@ ccコマンドを実行し、スタートアップコンフィグを削除しま
 > Copyright © NEC Corporation 2001-2014   . All rights reserved.
 > boot[0]>
 >
+```
 1. **プログラムファイルの起動**
 bコマンドを実行し、プログラムファイルのロードを開始します 。
 > boot[0]>b 　　＜－－Enter
