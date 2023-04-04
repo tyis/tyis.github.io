@@ -3,6 +3,7 @@ title: "Githubブログはじめました！"
 date: 2019-07-19 23:10:00 +0900
 categories: 
 published: true
+comments: true
 ---
 
 Githubブログをはじめました！

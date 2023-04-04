@@ -3,6 +3,7 @@ title: "Windows ７のインストール用のブータブルUSBの作り方"
 date: 2019-08-10 09:25:00 +0900
 categories: 
 published: true
+comments: true
 ---
 1. Windows 7もしくはWindows Vistaにてcmdを開きます。
 1. diskpartを実行します。

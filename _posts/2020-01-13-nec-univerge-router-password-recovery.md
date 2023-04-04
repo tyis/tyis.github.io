@@ -3,6 +3,7 @@ title: "NEC UNIVERGEルータのパスワードを忘れた場合"
 date: 2020-01-13 16:00:00 +0900
 categories: 
 published: true
+comments: true
 ---
 
 #### NECではパスワードリカバリーをスーパリセットと言うらしく、下記の様にパスワードをリセットする事が可能です。

@@ -3,6 +3,7 @@ title: "NEC IX2105Z 初期化"
 date: 2020-01-15 12:00:00 +0900
 categories: 
 published: true
+comments: true
 ---
 
 1. boot プロセス進行中にCtrl+Cを押して、ブレーキをかける。
