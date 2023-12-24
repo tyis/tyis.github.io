@@ -1,1 +1,1 @@
-# tyis.github.io
+# blog.tyis.co.jp
