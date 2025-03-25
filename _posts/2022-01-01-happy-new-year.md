@@ -8,4 +8,4 @@ comments: true
 
 あけましておめでとうございます！
 
-![happy new year]({{ site.url }}/assets/2022-01-01-first-post.jpeg)
+![happy new year]({{ site.url }}/assets/2022-01-01-first-post.jpg)
