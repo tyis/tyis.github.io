@@ -1,5 +1,5 @@
 ---
-title: "Happy New Year!"
+title: "Happy New Year! 2022"
 date: 2022-01-01 10:19:00 +0900
 categories:
 published: true
