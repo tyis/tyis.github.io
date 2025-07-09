@@ -19,7 +19,7 @@ locale                   : "ja_JP"
 title                    : "東洋インターネットサービス株式会社　デベロッパーグルーブブログ"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "東洋DEV"
+name                     : "TOYO Dev Team"
 description              : "東洋インターネットサービス株式会社　デベロッパーグルーブブログ"
 #url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 #baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -109,7 +109,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "東洋DEV"
+  name             : "TOYO Dev Team"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "デベロッパーの悩み事を共有しております。"
   location         : "神奈川県横浜市"
