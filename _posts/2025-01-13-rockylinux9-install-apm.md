@@ -1,7 +1,7 @@
 ---
 title: "Rocky Linux 9でのAPM(Apache, PHP, MariaDB)インストール方法"
 date: 2025-01-13 10:00:00 +0900
-categories:
+categories: [Linux, RockyLinux9, Apache, PHP, MySQL, APM]
 published: true
 comments: true
 ---
