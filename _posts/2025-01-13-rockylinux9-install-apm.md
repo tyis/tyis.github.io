@@ -4,6 +4,7 @@ date: 2025-01-13 10:00:00 +0900
 categories: [Linux, RockyLinux9, Apache, PHP, MySQL, APM]
 published: true
 comments: true
+permalink: /rockylinux9-install-apm/
 ---
 
 ## 1. システムパッケージの更新
