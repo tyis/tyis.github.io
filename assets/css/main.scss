@@ -9,29 +9,34 @@
    Modern, sleek dark design with vibrant accents
    ========================================================================== */
 
-/* ---------- Skin Variables ---------- */
-$background-color: #0f172a !default;
-$text-color: #e2e8f0 !default;
-$muted-text-color: #94a3b8 !default;
-$primary-color: #38bdf8 !default;
-$border-color: rgba(148, 163, 184, 0.12) !default;
-$code-background-color: #1e293b !default;
-$code-background-color-dark: #1e293b !default;
-$link-color: #38bdf8 !default;
-$link-color-hover: #7dd3fc !default;
-$link-color-visited: #a78bfa !default;
-$masthead-link-color: #e2e8f0 !default;
-$masthead-link-color-hover: #38bdf8 !default;
-$navicon-link-color-hover: #38bdf8 !default;
-$footer-background-color: #020617 !default;
-$lighter-gray: #1e293b !default;
-$light-gray: #334155 !default;
-$gray: #475569 !default;
-$dark-gray: #94a3b8 !default;
-$darker-gray: #cbd5e1 !default;
+/* ---------- Skin Variables (no !default = override theme) ---------- */
+$background-color: #0f172a;
+$text-color: #e2e8f0;
+$muted-text-color: #94a3b8;
+$primary-color: #38bdf8;
+$border-color: rgba(148, 163, 184, 0.12);
+$code-background-color: #1e293b;
+$code-background-color-dark: #1e293b;
+$link-color: #38bdf8;
+$link-color-hover: #7dd3fc;
+$link-color-visited: #a78bfa;
+$masthead-link-color: #e2e8f0;
+$masthead-link-color-hover: #38bdf8;
+$navicon-link-color-hover: #38bdf8;
+$footer-background-color: #020617;
+$lighter-gray: #1e293b;
+$light-gray: #334155;
+$gray: #475569;
+$dark-gray: #94a3b8;
+$darker-gray: #cbd5e1;
 
-/* ---------- Import Minimal Mistakes ---------- */
-@import "minimal-mistakes/skins/dark";
+/* Font family override */
+$sans-serif: 'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+$monospace: 'JetBrains Mono', 'Consolas', 'Monaco', monospace;
+$global-font-family: $sans-serif;
+$header-font-family: $sans-serif;
+
+/* ---------- Import Minimal Mistakes (uses our variables above) ---------- */
 @import "minimal-mistakes";
 
 /* ==========================================================================
