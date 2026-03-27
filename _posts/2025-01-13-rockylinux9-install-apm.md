@@ -7,6 +7,8 @@ comments: true
 permalink: /rockylinux9-install-apm/
 ---
 
+![APM Stack Architecture]({{ site.url }}/assets/images/svg/apm-architecture.svg)
+
 ## 1. システムパッケージの更新
 まず、システムパッケージを最新の状態に更新します。
 

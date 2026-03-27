@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="280" fill="url(#bg)" rx="12"/>
+  <text x="400" y="32" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="15" font-weight="700">NEC UNIVERGE Router - Super Reset Process</text>
+  <!-- Step 1 -->
+  <rect x="25" y="55" width="145" height="90" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.3"/>
+  <text x="97" y="78" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="22" font-weight="800">1</text>
+  <text x="97" y="98" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">電源ON</text>
+  <text x="97" y="114" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">コンソール接続状態で</text>
+  <text x="97" y="128" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">電源スイッチをON</text>
+  <text x="180" y="100" fill="#475569" font-family="sans-serif" font-size="16">&#x2192;</text>
+  <!-- Step 2 -->
+  <rect x="195" y="55" width="145" height="90" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.3"/>
+  <text x="267" y="78" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="22" font-weight="800">2</text>
+  <text x="267" y="98" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">Ctrl+C 入力</text>
+  <text x="267" y="114" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">## 表示中に</text>
+  <text x="267" y="128" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">ブートモニタへ移行</text>
+  <text x="350" y="100" fill="#475569" font-family="sans-serif" font-size="16">&#x2192;</text>
+  <!-- Step 3 -->
+  <rect x="365" y="55" width="145" height="90" rx="10" fill="#1e293b" stroke="#f87171" stroke-width="1.3"/>
+  <text x="437" y="78" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="22" font-weight="800">3</text>
+  <text x="437" y="98" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">cc コマンド実行</text>
+  <text x="437" y="114" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">スタートアップ</text>
+  <text x="437" y="128" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">コンフィグを削除</text>
+  <text x="520" y="100" fill="#475569" font-family="sans-serif" font-size="16">&#x2192;</text>
+  <!-- Step 4 -->
+  <rect x="535" y="55" width="145" height="90" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.3"/>
+  <text x="607" y="78" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="22" font-weight="800">4</text>
+  <text x="607" y="98" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">b コマンド実行</text>
+  <text x="607" y="114" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">プログラムファイル</text>
+  <text x="607" y="128" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">ロード開始</text>
+  <text x="690" y="100" fill="#475569" font-family="sans-serif" font-size="16">&#x2192;</text>
+  <!-- Complete -->
+  <rect x="700" y="67" width="70" height="66" rx="10" fill="#34d399" fill-opacity="0.12" stroke="#34d399" stroke-width="1.3"/>
+  <text x="735" y="97" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="18">&#x2713;</text>
+  <text x="735" y="118" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="9" font-weight="600">初期化完了</text>
+  <!-- Warning box -->
+  <rect x="25" y="170" width="745" height="90" rx="10" fill="#f87171" fill-opacity="0.06" stroke="#f87171" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="50" y="195" fill="#f87171" font-family="sans-serif" font-size="12" font-weight="700">&#x26A0; 注意事項</text>
+  <text x="50" y="215" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; スーパーリセットを行うと、すべての設定データが工場出荷時の状態に戻ります</text>
+  <text x="50" y="233" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; ランニングコンフィグ・スタートアップコンフィグの設定情報もすべて消去されます（ライセンスキーは保持）</text>
+  <text x="50" y="251" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; 事前にコンフィグのバックアップを推奨します</text>
+</svg>

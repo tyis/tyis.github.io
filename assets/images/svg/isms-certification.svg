@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="280" fill="url(#bg)" rx="12"/>
+  <text x="400" y="32" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="15" font-weight="700">ISO 27001:2022 (ISMS) Certification Scope</text>
+  <!-- Center shield -->
+  <circle cx="400" cy="145" r="55" fill="#38bdf8" fill-opacity="0.06" stroke="#38bdf8" stroke-width="1.5"/>
+  <circle cx="400" cy="145" r="35" fill="#38bdf8" fill-opacity="0.1" stroke="#38bdf8" stroke-width="1"/>
+  <text x="400" y="140" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="14" font-weight="800">ISO</text>
+  <text x="400" y="158" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="600">27001:2022</text>
+  <!-- Scope 1 -->
+  <rect x="30" y="65" width="220" height="65" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="140" y="90" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="11" font-weight="700">Data Centre / Cloud</text>
+  <text x="140" y="110" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">データセンター/クラウド</text>
+  <text x="140" y="124" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">コンサルティング</text>
+  <line x1="250" y1="97" x2="345" y2="130" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.4"/>
+  <!-- Scope 2 -->
+  <rect x="30" y="155" width="220" height="65" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.2"/>
+  <text x="140" y="180" text-anchor="middle" fill="#818cf8" font-family="sans-serif" font-size="11" font-weight="700">IT Outsourcing</text>
+  <text x="140" y="200" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">ITアウトソーシング</text>
+  <text x="140" y="214" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">（MSP・BPO）</text>
+  <line x1="250" y1="187" x2="345" y2="155" stroke="#818cf8" stroke-width="0.8" stroke-opacity="0.4"/>
+  <!-- Scope 3 -->
+  <rect x="550" y="105" width="220" height="75" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+  <text x="660" y="130" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="11" font-weight="700">Internet / Dedicated Line</text>
+  <text x="660" y="150" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">インターネット回線再販売</text>
+  <text x="660" y="166" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">国際専用線再販売</text>
+  <line x1="550" y1="142" x2="455" y2="145" stroke="#34d399" stroke-width="0.8" stroke-opacity="0.4"/>
+  <!-- BSI info -->
+  <rect x="200" y="240" width="400" height="28" rx="6" fill="#334155"/>
+  <text x="400" y="259" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="10">BSI Group Japan | Registration No: IS 793641 | 東洋インターネットサービス株式会社</text>
+</svg>

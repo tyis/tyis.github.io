@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 220">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="220" fill="url(#bg)" rx="12"/>
+  <text x="400" y="32" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="15" font-weight="700">NEC IX2105Z - Factory Reset Process</text>
+  <!-- Steps -->
+  <rect x="25" y="58" width="130" height="75" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.3"/>
+  <text x="90" y="82" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="20" font-weight="800">1</text>
+  <text x="90" y="100" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">Ctrl+C</text>
+  <text x="90" y="116" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">boot中にブレーキ</text>
+  <text x="165" y="95" fill="#475569" font-family="sans-serif" font-size="16">&#x2192;</text>
+  <rect x="180" y="58" width="130" height="75" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.3"/>
+  <text x="245" y="82" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="20" font-weight="800">2</text>
+  <text x="245" y="100" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">sa deactivate</text>
+  <text x="245" y="116" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">ゼロコンフィグ無効</text>
+  <text x="320" y="95" fill="#475569" font-family="sans-serif" font-size="16">&#x2192;</text>
+  <rect x="335" y="58" width="130" height="75" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.3"/>
+  <text x="400" y="82" text-anchor="middle" fill="#818cf8" font-family="sans-serif" font-size="20" font-weight="800">3</text>
+  <text x="400" y="100" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">sa activate</text>
+  <text x="400" y="116" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">ゼロコンフィグ有効</text>
+  <text x="475" y="95" fill="#475569" font-family="sans-serif" font-size="16">&#x2192;</text>
+  <rect x="490" y="58" width="130" height="75" rx="10" fill="#1e293b" stroke="#f87171" stroke-width="1.3"/>
+  <text x="555" y="82" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="20" font-weight="800">4</text>
+  <text x="555" y="100" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">cc</text>
+  <text x="555" y="116" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">設定の初期化</text>
+  <text x="630" y="95" fill="#475569" font-family="sans-serif" font-size="16">&#x2192;</text>
+  <rect x="645" y="58" width="130" height="75" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.3"/>
+  <text x="710" y="82" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="20" font-weight="800">5</text>
+  <text x="710" y="100" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">b</text>
+  <text x="710" y="116" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">ブーティング</text>
+  <!-- Command reference -->
+  <rect x="25" y="155" width="745" height="48" rx="8" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+  <text x="45" y="175" fill="#64748b" font-family="sans-serif" font-size="10" font-weight="600">Commands:</text>
+  <text x="130" y="175" fill="#38bdf8" font-family="monospace" font-size="10">Ctrl+C</text>
+  <text x="195" y="175" fill="#475569" font-family="sans-serif" font-size="10">&#x2192;</text>
+  <text x="215" y="175" fill="#fbbf24" font-family="monospace" font-size="10">sa deactivate</text>
+  <text x="330" y="175" fill="#475569" font-family="sans-serif" font-size="10">&#x2192;</text>
+  <text x="350" y="175" fill="#818cf8" font-family="monospace" font-size="10">sa activate</text>
+  <text x="445" y="175" fill="#475569" font-family="sans-serif" font-size="10">&#x2192;</text>
+  <text x="465" y="175" fill="#f87171" font-family="monospace" font-size="10">cc</text>
+  <text x="490" y="175" fill="#475569" font-family="sans-serif" font-size="10">&#x2192;</text>
+  <text x="510" y="175" fill="#34d399" font-family="monospace" font-size="10">b</text>
+  <text x="535" y="175" fill="#475569" font-family="sans-serif" font-size="10">&#x2192;</text>
+  <text x="560" y="175" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="600">&#x2713; Done</text>
+</svg>
