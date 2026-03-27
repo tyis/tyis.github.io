@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#bg5)" rx="12"/>
+  <text x="400" y="35" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="16" font-weight="700">RecyclePocket - IT Equipment Buyback Flow</text>
+  <!-- Step boxes -->
+  <rect x="30" y="65" width="110" height="85" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="85" y="93" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="22" font-weight="800">1</text>
+  <text x="85" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">お問い合わせ</text>
+  <text x="85" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">Web/電話</text>
+  <text x="155" y="107" fill="#475569" font-family="sans-serif" font-size="18">&#x2192;</text>
+  <rect x="175" y="65" width="110" height="85" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.2"/>
+  <text x="230" y="93" text-anchor="middle" fill="#818cf8" font-family="sans-serif" font-size="22" font-weight="800">2</text>
+  <text x="230" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">査定・見積</text>
+  <text x="230" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">機器リスト提出</text>
+  <text x="300" y="107" fill="#475569" font-family="sans-serif" font-size="18">&#x2192;</text>
+  <rect x="320" y="65" width="110" height="85" rx="10" fill="#1e293b" stroke="#c084fc" stroke-width="1.2"/>
+  <text x="375" y="93" text-anchor="middle" fill="#c084fc" font-family="sans-serif" font-size="22" font-weight="800">3</text>
+  <text x="375" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">データ消去</text>
+  <text x="375" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">出張対応可</text>
+  <text x="445" y="107" fill="#475569" font-family="sans-serif" font-size="18">&#x2192;</text>
+  <rect x="465" y="65" width="110" height="85" rx="10" fill="#1e293b" stroke="#fb923c" stroke-width="1.2"/>
+  <text x="520" y="93" text-anchor="middle" fill="#fb923c" font-family="sans-serif" font-size="22" font-weight="800">4</text>
+  <text x="520" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">機器引取</text>
+  <text x="520" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">証明書発行</text>
+  <text x="590" y="107" fill="#475569" font-family="sans-serif" font-size="18">&#x2192;</text>
+  <rect x="610" y="65" width="160" height="85" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="690" y="93" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="22" font-weight="800">5</text>
+  <text x="690" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">買取金額お支払い</text>
+  <text x="690" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">リサイクル処理</text>
+  <!-- Target devices -->
+  <rect x="30" y="185" width="740" height="90" rx="10" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+  <text x="400" y="210" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="12" font-weight="700">買取対象機器</text>
+  <rect x="55" y="225" width="100" height="30" rx="6" fill="#334155"/>
+  <text x="105" y="244" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="10">PC / Laptop</text>
+  <rect x="170" y="225" width="100" height="30" rx="6" fill="#334155"/>
+  <text x="220" y="244" text-anchor="middle" fill="#818cf8" font-family="sans-serif" font-size="10">Server</text>
+  <rect x="285" y="225" width="100" height="30" rx="6" fill="#334155"/>
+  <text x="335" y="244" text-anchor="middle" fill="#c084fc" font-family="sans-serif" font-size="10">Network</text>
+  <rect x="400" y="225" width="100" height="30" rx="6" fill="#334155"/>
+  <text x="450" y="244" text-anchor="middle" fill="#fb923c" font-family="sans-serif" font-size="10">Storage</text>
+  <rect x="515" y="225" width="100" height="30" rx="6" fill="#334155"/>
+  <text x="565" y="244" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="10">UPS</text>
+  <rect x="630" y="225" width="120" height="30" rx="6" fill="#334155"/>
+  <text x="690" y="244" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="10">Monitor / Other</text>
+</svg>

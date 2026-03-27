@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="350" fill="url(#bg2)" rx="12"/>
+  <!-- Step 1 -->
+  <rect x="30" y="60" width="130" height="100" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="95" y="90" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="24" font-weight="800">1</text>
+  <text x="95" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">Assessment</text>
+  <text x="95" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">現状分析・評価</text>
+  <!-- Arrow -->
+  <line x1="165" y1="110" x2="190" y2="110" stroke="#475569" stroke-width="2"/>
+  <polygon points="188,105 198,110 188,115" fill="#475569"/>
+  <!-- Step 2 -->
+  <rect x="195" y="60" width="130" height="100" rx="12" fill="#1e293b" stroke="#818cf8" stroke-width="1.2"/>
+  <text x="260" y="90" text-anchor="middle" fill="#818cf8" font-family="sans-serif" font-size="24" font-weight="800">2</text>
+  <text x="260" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">Planning</text>
+  <text x="260" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">移行計画策定</text>
+  <!-- Arrow -->
+  <line x1="330" y1="110" x2="355" y2="110" stroke="#475569" stroke-width="2"/>
+  <polygon points="353,105 363,110 353,115" fill="#475569"/>
+  <!-- Step 3 -->
+  <rect x="360" y="60" width="130" height="100" rx="12" fill="#1e293b" stroke="#c084fc" stroke-width="1.2"/>
+  <text x="425" y="90" text-anchor="middle" fill="#c084fc" font-family="sans-serif" font-size="24" font-weight="800">3</text>
+  <text x="425" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">Migration</text>
+  <text x="425" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">移行実施</text>
+  <!-- Arrow -->
+  <line x1="495" y1="110" x2="520" y2="110" stroke="#475569" stroke-width="2"/>
+  <polygon points="518,105 528,110 518,115" fill="#475569"/>
+  <!-- Step 4 -->
+  <rect x="525" y="60" width="130" height="100" rx="12" fill="#1e293b" stroke="#fb923c" stroke-width="1.2"/>
+  <text x="590" y="90" text-anchor="middle" fill="#fb923c" font-family="sans-serif" font-size="24" font-weight="800">4</text>
+  <text x="590" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="600">Optimization</text>
+  <text x="590" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">最適化・運用</text>
+  <!-- Arrow -->
+  <line x1="660" y1="110" x2="685" y2="110" stroke="#475569" stroke-width="2"/>
+  <polygon points="683,105 693,110 683,115" fill="#475569"/>
+  <!-- Step 5 -->
+  <rect x="690" y="60" width="80" height="100" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+  <text x="730" y="90" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="24" font-weight="800">5</text>
+  <text x="730" y="115" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="10" font-weight="600">Complete</text>
+  <text x="730" y="132" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="9">運用安定化</text>
+  <!-- Detail boxes -->
+  <rect x="30" y="195" width="235" height="120" rx="10" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+  <text x="147" y="220" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="700">Assessment &amp; Planning</text>
+  <text x="45" y="242" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; ワークロード分析</text>
+  <text x="45" y="258" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; コスト試算（TCO比較）</text>
+  <text x="45" y="274" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; リスク評価</text>
+  <text x="45" y="290" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; 移行スケジュール策定</text>
+  <rect x="282" y="195" width="235" height="120" rx="10" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+  <text x="400" y="220" text-anchor="middle" fill="#c084fc" font-family="sans-serif" font-size="12" font-weight="700">Migration Execution</text>
+  <text x="297" y="242" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; テスト環境構築・検証</text>
+  <text x="297" y="258" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; データ移行</text>
+  <text x="297" y="274" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; アプリケーション移行</text>
+  <text x="297" y="290" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; 切り替え・動作確認</text>
+  <rect x="534" y="195" width="235" height="120" rx="10" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+  <text x="652" y="220" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="12" font-weight="700">Optimization &amp; Ops</text>
+  <text x="549" y="242" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; パフォーマンスチューニング</text>
+  <text x="549" y="258" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; コスト最適化</text>
+  <text x="549" y="274" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; 監視・運用体制構築</text>
+  <text x="549" y="290" fill="#94a3b8" font-family="sans-serif" font-size="10">&#x2022; 旧機器データ消去・廃棄</text>
+</svg>

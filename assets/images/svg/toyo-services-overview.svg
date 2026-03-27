@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#bg6)" rx="12"/>
+  <text x="400" y="35" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="16" font-weight="700">TOYO Internet Services - Service Portfolio</text>
+  <!-- Service 1 -->
+  <rect x="30" y="60" width="175" height="220" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <circle cx="117" cy="100" r="22" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-width="1"/>
+  <text x="117" y="107" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="18">&#x2601;</text>
+  <text x="117" y="140" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="700">データセンター</text>
+  <text x="117" y="156" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="700">クラウド</text>
+  <text x="45" y="180" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; DC選定・移行支援</text>
+  <text x="45" y="196" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; クラウド設計・構築</text>
+  <text x="45" y="212" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; ハイブリッド構成</text>
+  <text x="45" y="228" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; DR設計</text>
+  <text x="45" y="244" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; コスト最適化</text>
+  <text x="117" y="270" text-anchor="middle" fill="#475569" font-family="sans-serif" font-size="9">tyis.co.jp</text>
+  <!-- Service 2 -->
+  <rect x="222" y="60" width="175" height="220" rx="14" fill="#1e293b" stroke="#818cf8" stroke-width="1.2"/>
+  <circle cx="309" cy="100" r="22" fill="#818cf8" fill-opacity="0.12" stroke="#818cf8" stroke-width="1"/>
+  <text x="309" y="107" text-anchor="middle" fill="#818cf8" font-family="sans-serif" font-size="18">&#x1F5A5;</text>
+  <text x="309" y="140" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="700">ITアウトソーシング</text>
+  <text x="309" y="156" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="700">MSP / BPO</text>
+  <text x="237" y="180" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 24時間監視</text>
+  <text x="237" y="196" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 障害対応</text>
+  <text x="237" y="212" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; ヘルプデスク</text>
+  <text x="237" y="228" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; IT資産管理代行</text>
+  <text x="237" y="244" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; ベンダー管理</text>
+  <text x="309" y="270" text-anchor="middle" fill="#475569" font-family="sans-serif" font-size="9">tyis.co.jp</text>
+  <!-- Service 3 -->
+  <rect x="414" y="60" width="175" height="220" rx="14" fill="#1e293b" stroke="#f87171" stroke-width="1.2"/>
+  <circle cx="501" cy="100" r="22" fill="#f87171" fill-opacity="0.12" stroke="#f87171" stroke-width="1"/>
+  <text x="501" y="107" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="18">&#x1F6E1;</text>
+  <text x="501" y="140" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="700">電子記録抹消</text>
+  <text x="501" y="156" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="700">データ消去</text>
+  <text x="429" y="180" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; HDD/SSD完全消去</text>
+  <text x="429" y="196" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 物理破壊</text>
+  <text x="429" y="212" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 出張サービス</text>
+  <text x="429" y="228" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 消去証明書発行</text>
+  <text x="429" y="244" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 大規模対応</text>
+  <text x="501" y="270" text-anchor="middle" fill="#475569" font-family="sans-serif" font-size="9">erasure.tyis.co.jp</text>
+  <!-- Service 4 -->
+  <rect x="606" y="60" width="175" height="220" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="1.2"/>
+  <circle cx="693" cy="100" r="22" fill="#34d399" fill-opacity="0.12" stroke="#34d399" stroke-width="1"/>
+  <text x="693" y="107" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="18">&#x267B;</text>
+  <text x="693" y="140" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="700">リサイクルポケット</text>
+  <text x="693" y="156" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="11" font-weight="700">IT機器買取</text>
+  <text x="621" y="180" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 法人向け買取</text>
+  <text x="621" y="196" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 適正価格査定</text>
+  <text x="621" y="212" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 出張引取対応</text>
+  <text x="621" y="228" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 環境配慮リサイクル</text>
+  <text x="621" y="244" fill="#94a3b8" font-family="sans-serif" font-size="9">&#x2022; 消去サービス連携</text>
+  <text x="693" y="270" text-anchor="middle" fill="#475569" font-family="sans-serif" font-size="9">recyclepocket.com</text>
+</svg>

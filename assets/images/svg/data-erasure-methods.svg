@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="300" fill="url(#bg4)" rx="12"/>
+  <text x="400" y="35" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="16" font-weight="700">Data Erasure Methods Comparison</text>
+  <!-- Method 1: OS Delete -->
+  <rect x="30" y="60" width="170" height="210" rx="12" fill="#1e293b" stroke="#f87171" stroke-width="1.2"/>
+  <text x="115" y="90" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="13" font-weight="700">OS削除</text>
+  <text x="115" y="110" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="10">&#x2716; 危険</text>
+  <line x1="50" y1="120" x2="180" y2="120" stroke="#334155" stroke-width="0.8"/>
+  <text x="45" y="142" fill="#94a3b8" font-family="sans-serif" font-size="10">目次のみ削除</text>
+  <text x="45" y="160" fill="#94a3b8" font-family="sans-serif" font-size="10">実データ残存</text>
+  <text x="45" y="178" fill="#94a3b8" font-family="sans-serif" font-size="10">簡単に復元可能</text>
+  <rect x="50" y="200" width="130" height="24" rx="4" fill="#f87171" fill-opacity="0.15"/>
+  <text x="115" y="216" text-anchor="middle" fill="#f87171" font-family="sans-serif" font-size="10" font-weight="600">Security: &#x2605;&#x2606;&#x2606;&#x2606;&#x2606;</text>
+  <rect x="50" y="232" width="130" height="24" rx="4" fill="#334155"/>
+  <rect x="50" y="232" width="26" height="24" rx="4" fill="#f87171" fill-opacity="0.5"/>
+  <!-- Method 2: Format -->
+  <rect x="220" y="60" width="170" height="210" rx="12" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+  <text x="305" y="90" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="13" font-weight="700">フォーマット</text>
+  <text x="305" y="110" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="10">&#x26A0; 不十分</text>
+  <line x1="240" y1="120" x2="370" y2="120" stroke="#334155" stroke-width="0.8"/>
+  <text x="235" y="142" fill="#94a3b8" font-family="sans-serif" font-size="10">パーティション初期化</text>
+  <text x="235" y="160" fill="#94a3b8" font-family="sans-serif" font-size="10">一部データ残存</text>
+  <text x="235" y="178" fill="#94a3b8" font-family="sans-serif" font-size="10">専門ツールで復元可</text>
+  <rect x="240" y="200" width="130" height="24" rx="4" fill="#fbbf24" fill-opacity="0.15"/>
+  <text x="305" y="216" text-anchor="middle" fill="#fbbf24" font-family="sans-serif" font-size="10" font-weight="600">Security: &#x2605;&#x2605;&#x2606;&#x2606;&#x2606;</text>
+  <rect x="240" y="232" width="130" height="24" rx="4" fill="#334155"/>
+  <rect x="240" y="232" width="52" height="24" rx="4" fill="#fbbf24" fill-opacity="0.5"/>
+  <!-- Method 3: Software -->
+  <rect x="410" y="60" width="170" height="210" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="495" y="90" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="13" font-weight="700">ソフトウェア消去</text>
+  <text x="495" y="110" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="10">&#x25CB; 有効（HDD）</text>
+  <line x1="430" y1="120" x2="560" y2="120" stroke="#334155" stroke-width="0.8"/>
+  <text x="425" y="142" fill="#94a3b8" font-family="sans-serif" font-size="10">全領域を上書き</text>
+  <text x="425" y="160" fill="#94a3b8" font-family="sans-serif" font-size="10">複数回上書き対応</text>
+  <text x="425" y="178" fill="#94a3b8" font-family="sans-serif" font-size="10">SSDは不完全な場合あり</text>
+  <rect x="430" y="200" width="130" height="24" rx="4" fill="#38bdf8" fill-opacity="0.15"/>
+  <text x="495" y="216" text-anchor="middle" fill="#38bdf8" font-family="sans-serif" font-size="10" font-weight="600">Security: &#x2605;&#x2605;&#x2605;&#x2605;&#x2606;</text>
+  <rect x="430" y="232" width="130" height="24" rx="4" fill="#334155"/>
+  <rect x="430" y="232" width="104" height="24" rx="4" fill="#38bdf8" fill-opacity="0.5"/>
+  <!-- Method 4: Physical -->
+  <rect x="600" y="60" width="170" height="210" rx="12" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+  <text x="685" y="90" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="13" font-weight="700">物理破壊</text>
+  <text x="685" y="110" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="10">&#x25CE; 最も確実</text>
+  <line x1="620" y1="120" x2="750" y2="120" stroke="#334155" stroke-width="0.8"/>
+  <text x="615" y="142" fill="#94a3b8" font-family="sans-serif" font-size="10">物理的に破砕・穿孔</text>
+  <text x="615" y="160" fill="#94a3b8" font-family="sans-serif" font-size="10">復元は物理的に不可能</text>
+  <text x="615" y="178" fill="#94a3b8" font-family="sans-serif" font-size="10">HDD/SSD両方に有効</text>
+  <rect x="620" y="200" width="130" height="24" rx="4" fill="#34d399" fill-opacity="0.15"/>
+  <text x="685" y="216" text-anchor="middle" fill="#34d399" font-family="sans-serif" font-size="10" font-weight="600">Security: &#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</text>
+  <rect x="620" y="232" width="130" height="24" rx="4" fill="#34d399" fill-opacity="0.5"/>
+</svg>
