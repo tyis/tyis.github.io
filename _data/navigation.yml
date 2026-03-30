@@ -1,0 +1,9 @@
+main:
+  - title: "ホーム"
+    url: /
+  - title: "カテゴリ"
+    url: /categories/
+  - title: "タグ"
+    url: /tags/
+  - title: "このブログについて"
+    url: /about/
