@@ -1,6 +1,4 @@
 main:
-  - title: "ホーム"
-    url: /
   - title: "カテゴリ"
     url: /categories/
   - title: "タグ"
