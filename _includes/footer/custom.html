@@ -1,0 +1,74 @@
+<div class="footer-custom">
+  <div class="footer-custom__inner">
+    <div class="footer-custom__company">
+      <p class="footer-custom__name">東洋インターネットサービス株式会社</p>
+      <p class="footer-custom__address">〒220-0012 神奈川県横浜市西区みなとみらい3-3-1<br>三菱重工横浜ビル</p>
+      <p class="footer-custom__contact">
+        TEL: <a href="tel:0453194590">045-319-4590</a>　/
+        E-mail: <a href="mailto:info@tyis.co.jp">info@tyis.co.jp</a>
+      </p>
+    </div>
+    <div class="footer-custom__links">
+      <a href="https://www.tyis.co.jp/" target="_blank" rel="noopener">会社概要</a>
+      <a href="https://www.tyis.co.jp/privacy/" target="_blank" rel="noopener">プライバシーポリシー</a>
+      <a href="https://www.tyis.co.jp/security/" target="_blank" rel="noopener">セキュリティポリシー</a>
+      <a href="https://www.tyis.co.jp/contact/" target="_blank" rel="noopener">お問い合わせ</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.footer-custom {
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5em 0 0.5em;
+  margin-top: 1em;
+  font-size: 0.8em;
+  color: #666;
+}
+.footer-custom__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.footer-custom__name {
+  font-weight: bold;
+  margin: 0 0 0.3em;
+  color: #444;
+}
+.footer-custom__address,
+.footer-custom__contact {
+  margin: 0.2em 0;
+  line-height: 1.6;
+}
+.footer-custom__contact a {
+  color: #666;
+  text-decoration: none;
+}
+.footer-custom__contact a:hover {
+  text-decoration: underline;
+}
+.footer-custom__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  align-items: center;
+}
+.footer-custom__links a {
+  color: #666;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.footer-custom__links a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .footer-custom__inner {
+    flex-direction: column;
+  }
+}
+</style>
