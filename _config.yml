@@ -113,11 +113,11 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "デベロッパーの悩み事を共有しております。"
   location         : "神奈川県横浜市西区みなとみらい"
-  email            : "info@tyis.co.jp"
+  email            : "support@tyis.co.jp"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: mailto:info@tyis.co.jp
+      # url: mailto:support@tyis.co.jp
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://www.tyis.co.jp/"
