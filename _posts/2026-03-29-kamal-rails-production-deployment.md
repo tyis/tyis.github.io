@@ -1,6 +1,6 @@
 ---
 title: "Kamalを使ってRailsアプリを本番サーバーにデプロイする方法：複数アプリを1台のサーバーで運用"
-date: 2026-03-30 18:00:00 +0900
+date: 2026-03-29 18:00:00 +0900
 categories: [技術ブログ, デプロイ]
 tags: [Kamal, Rails, Docker, PostgreSQL, デプロイ, プロダクション, サーバー運用, kamal-proxy, Ruby]
 description: "Kamal 2を使って複数のRailsアプリケーションを1台のサーバーに本番デプロイする手順を解説します。Docker Hubへのイメージ管理、PostgreSQLアクセサリー、kamal-proxyによるマルチアプリ運用まで実践的にまとめました。"
