@@ -15,7 +15,7 @@ comments: true
 
 本記事では、オンプレミス環境からクラウドへの移行を成功させるために、**知っておくべきポイント**を実践的に解説します。
 
-![クラウド移行の全体像]({{ site.url }}/assets/images/svg/cloud-migration-overview.svg)
+![クラウド移行の全体像]({{ site.url }}/assets/images/posts/2026-03-27/cloud-migration-overview.svg)
 
 ## なぜ今、クラウド移行が求められるのか
 
@@ -53,7 +53,7 @@ comments: true
 
 ## クラウド移行の5つのステップ
 
-![移行ステップ]({{ site.url }}/assets/images/svg/migration-steps.svg)
+![移行ステップ]({{ site.url }}/assets/images/posts/2026-03-27/migration-steps.svg)
 
 ### Step 1：Assessment（現状分析・評価）
 

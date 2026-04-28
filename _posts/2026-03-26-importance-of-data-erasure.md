@@ -53,7 +53,7 @@ IT機器を廃棄・譲渡する際、「ファイルを削除した」「フォ
   → それでも専門業者なら復元可能な場合がある
 ```
 
-![データ消去方法の比較]({{ site.url }}/assets/images/svg/data-erasure-methods.svg)
+![データ消去方法の比較]({{ site.url }}/assets/images/posts/2026-03-26/data-erasure-methods.svg)
 
 ### 本来必要な「完全消去」
 

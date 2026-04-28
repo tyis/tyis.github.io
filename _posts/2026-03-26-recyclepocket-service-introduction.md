@@ -57,7 +57,7 @@ comments: true
 
 ## ご利用の流れ
 
-![リサイクルポケット利用フロー]({{ site.url }}/assets/images/svg/recyclepocket-flow.svg)
+![リサイクルポケット利用フロー]({{ site.url }}/assets/images/posts/2026-03-26/recyclepocket-flow.svg)
 
 ```
 【1】Webフォーム or 電話でお問い合わせ

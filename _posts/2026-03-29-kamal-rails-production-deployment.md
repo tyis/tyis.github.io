@@ -11,7 +11,7 @@ comments: true
 
 # Kamalを使ってRailsアプリを本番サーバーにデプロイする
 
-![Kamal Deploy]({{ site.url }}/assets/images/svg/kamal-deploy.svg)
+![Kamal Deploy]({{ site.url }}/assets/images/posts/2026-03-29/kamal-deploy.svg)
 
 Rails 8から標準のデプロイツールとなった**Kamal**を使って、複数のRailsアプリケーションを**1台のサーバー**に本番デプロイする方法をまとめます。
 

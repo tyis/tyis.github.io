@@ -11,7 +11,7 @@ comments: true
 
 # クラウドGPUサーバーホスティングサービス開始のお知らせ
 
-![GPU Server Hosting]({{ site.url }}/assets/images/svg/gpu-server-hosting.svg)
+![GPU Server Hosting]({{ site.url }}/assets/images/posts/2026-03-27/gpu-server-hosting.svg)
 
 東洋インターネットサービス株式会社は、**クラウドGPUサーバーホスティングサービス**を開始いたしました。
 

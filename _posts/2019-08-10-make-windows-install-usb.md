@@ -6,7 +6,7 @@ published: true
 comments: true
 ---
 
-![Windows Bootable USB Creation Flow]({{ site.url }}/assets/images/svg/windows-bootable-usb.svg)
+![Windows Bootable USB Creation Flow]({{ site.url }}/assets/images/posts/2019-08-10/windows-bootable-usb.svg)
 
 1. Windows 7もしくはWindows Vistaにてcmdを開きます。
 1. diskpartを実行します。

@@ -6,7 +6,7 @@ published: true
 comments: true
 ---
 
-![NEC IX2105Z Factory Reset]({{ site.url }}/assets/images/svg/nec-ix2105z-reset.svg)
+![NEC IX2105Z Factory Reset]({{ site.url }}/assets/images/posts/2020-01-15/nec-ix2105z-reset.svg)
 
 1. boot プロセス進行中にCtrl+Cを押して、ブレーキをかける。
 1. sa deactivate と入力し、ゼロコンフィグを無効にする。

@@ -6,7 +6,7 @@ published: true
 comments: true
 ---
 
-![NEC UNIVERGE Super Reset Process]({{ site.url }}/assets/images/svg/nec-router-reset.svg)
+![NEC UNIVERGE Super Reset Process]({{ site.url }}/assets/images/posts/2020-01-13/nec-router-reset.svg)
 
 #### NECではパスワードリカバリーをスーパリセットと言うらしく、下記の様にパスワードをリセットする事が可能です。
 #### 注意事項ですが、すべての設定が消えてしまうので注意してください。

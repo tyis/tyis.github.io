@@ -11,7 +11,7 @@ comments: true
 
 # 東洋インターネットサービス株式会社（TOYO）の事業紹介
 
-![TOYOサービス体系]({{ site.url }}/assets/images/svg/toyo-services-overview.svg)
+![TOYOサービス体系]({{ site.url }}/assets/images/posts/2026-03-24/toyo-services-overview.svg)
 
 **[東洋インターネットサービス株式会社（TOYO）](https://tyis.co.jp/){:target="_blank"}** は、神奈川県横浜市みなとみらいに拠点を置くIT企業です。
 

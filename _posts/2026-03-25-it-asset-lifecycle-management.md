@@ -13,7 +13,7 @@ comments: true
 
 IT機器の管理は「導入」だけでなく、「運用」から「廃棄」まで含めた**ライフサイクル全体**で考える必要があります。特に廃棄フェーズにおけるデータセキュリティとコスト管理は、多くの企業が見落としがちな重要課題です。
 
-![IT資産ライフサイクル管理]({{ site.url }}/assets/images/svg/it-asset-lifecycle.svg)
+![IT資産ライフサイクル管理]({{ site.url }}/assets/images/posts/2026-03-25/it-asset-lifecycle.svg)
 
 ## IT資産ライフサイクルの全体像
 
