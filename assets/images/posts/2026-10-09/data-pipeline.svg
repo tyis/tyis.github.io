@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="データの流れ: 公開データから統計モデル、集計、静的サイトまで">
+  <defs>
+    <linearGradient id="dp-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+    <marker id="dp-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#94a3b8"/></marker>
+  </defs>
+  <rect width="800" height="400" fill="url(#dp-bg)" rx="12"/>
+  <text x="400" y="34" text-anchor="middle" fill="#e2e8f0" font-family="sans-serif" font-size="16" font-weight="700">データの流れ(公開データ → 統計モデル → 静的サイト)</text>
+
+  <!-- sources -->
+  <g font-family="sans-serif" font-size="12">
+    <rect x="30" y="70" width="190" height="62" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="1.5"/>
+    <text x="125" y="94" text-anchor="middle" fill="#93c5fd" font-weight="700">不動産取引価格情報</text>
+    <text x="125" y="114" text-anchor="middle" fill="#cbd5e1">国土交通省・実取引 約194万件</text>
+
+    <rect x="30" y="150" width="190" height="62" rx="10" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+    <text x="125" y="174" text-anchor="middle" fill="#6ee7b7" font-weight="700">地価公示(国土数値情報)</text>
+    <text x="125" y="194" text-anchor="middle" fill="#cbd5e1">標準地 1995年〜 約16万件</text>
+
+    <rect x="30" y="230" width="190" height="62" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="125" y="254" text-anchor="middle" fill="#fcd34d" font-weight="700">競売の売却結果</text>
+    <text x="125" y="274" text-anchor="middle" fill="#cbd5e1">裁判所 BIT・約8,100件</text>
+  </g>
+
+  <!-- model -->
+  <g font-family="sans-serif" font-size="12">
+    <rect x="290" y="110" width="220" height="130" rx="10" fill="#1e293b" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="400" y="136" text-anchor="middle" fill="#c4b5fd" font-weight="700">統計モデル(Rails・Ruby)</text>
+    <text x="400" y="160" text-anchor="middle" fill="#cbd5e1">ヘドニック回帰(市区町村×種別 650)</text>
+    <text x="400" y="180" text-anchor="middle" fill="#cbd5e1">平滑化 + リッジ + 外れ値除去</text>
+    <text x="400" y="200" text-anchor="middle" fill="#cbd5e1">競売 ÷ 推定相場、中央値・四分位</text>
+    <text x="400" y="220" text-anchor="middle" fill="#cbd5e1">最小標本数・禁止項目の検査</text>
+  </g>
+
+  <!-- publish -->
+  <g font-family="sans-serif" font-size="12">
+    <rect x="580" y="70" width="190" height="62" rx="10" fill="#1e293b" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="675" y="94" text-anchor="middle" fill="#f9a8d4" font-weight="700">集計だけを JSON に</text>
+    <text x="675" y="114" text-anchor="middle" fill="#cbd5e1">週1回・GitLab へ自動コミット</text>
+
+    <rect x="580" y="150" width="190" height="62" rx="10" fill="#1e293b" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="675" y="174" text-anchor="middle" fill="#f9a8d4" font-weight="700">CI(方針チェック・ビルド)</text>
+    <text x="675" y="194" text-anchor="middle" fill="#cbd5e1">Jekyll で静的サイトを生成</text>
+
+    <rect x="580" y="230" width="190" height="62" rx="10" fill="#1e293b" stroke="#f472b6" stroke-width="1.5"/>
+    <text x="675" y="254" text-anchor="middle" fill="#f9a8d4" font-weight="700">Cloudflare Pages</text>
+    <text x="675" y="274" text-anchor="middle" fill="#cbd5e1">fudosan-report.tyis.co.jp</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#94a3b8" stroke-width="1.8" fill="none" marker-end="url(#dp-arrow)">
+    <path d="M222,101 C255,101 255,150 288,160"/>
+    <path d="M222,181 L288,178"/>
+    <path d="M222,261 C255,261 255,205 288,196"/>
+    <path d="M512,150 C545,140 545,101 578,101"/>
+    <path d="M675,134 L675,148"/>
+    <path d="M675,214 L675,228"/>
+  </g>
+  <text x="400" y="340" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="12">個別の物件・住所・事件の情報は集計の段階で落とし、公開側には集計値だけが渡ります</text>
+  <text x="400" y="364" text-anchor="middle" fill="#64748b" font-family="sans-serif" font-size="11">件数は 2026年10月時点の蓄積(取引は東京・神奈川・埼玉・千葉)</text>
+</svg>
