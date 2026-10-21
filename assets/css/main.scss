@@ -39,13 +39,22 @@ $max-width: 1400px;
   float: none;
 }
 
+// 글자 크기는 테마가 화면 폭별로 이미 키우므로(16~22px) 줄 간격만 조정
 .page__content {
-  font-size: 1.05em;
   line-height: 1.9;
 
   p, li { word-break: normal; overflow-wrap: anywhere; }
 
   pre, table, img { max-width: 100%; }
   table { display: block; overflow-x: auto; }
+
+  // MathJax 수식이 길면 페이지 전체가 아니라 수식 영역만 가로 스크롤
+  mjx-container[display="true"] {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
 }
 
+// 좁은 화면에서 프로필의 팔로우 버튼이 세로로 줄바꿈되는 것 방지
+.author__urls-wrapper .btn { white-space: nowrap; }
