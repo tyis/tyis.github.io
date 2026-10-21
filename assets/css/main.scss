@@ -1,0 +1,48 @@
+---
+# Front matter가 있어야 Jekyll이 SCSS로 처리합니다 (삭제 금지)
+---
+
+@charset "utf-8";
+
+// 변수는 테마 import 보다 먼저 지정해야 !default 를 덮어씁니다.
+$max-width: 1400px;
+
+@import "minimal-mistakes/skins/default";
+@import "minimal-mistakes";
+
+/* ==========================================================================
+   본문 폭 / 가독성 조정
+   - 테마는 사이드바 유무와 관계없이 .page 우측에 200~300px 을 예약하므로 해제
+   - 읽기 폭은 .page__inner-wrap 의 max-width 로 제한 (한 줄 약 60자 내외)
+   ========================================================================== */
+
+@include breakpoint($large) {
+  .page {
+    width: 100%;
+    padding-inline-end: 0;
+  }
+}
+
+.page .page__inner-wrap {
+  max-width: 1000px;
+  margin-inline: auto;
+  float: none;
+}
+
+.page__content {
+  font-size: 1.05em;
+  line-height: 1.9;
+
+  p, li { word-break: normal; overflow-wrap: anywhere; }
+
+  pre, table, img { max-width: 100%; }
+  table { display: block; overflow-x: auto; }
+}
+
+// 목록/아카이브 페이지도 같은 폭으로 정렬
+.archive {
+  @include breakpoint($large) {
+    width: 100%;
+    padding-inline-end: 0;
+  }
+}
