@@ -12,13 +12,23 @@ $max-width: 1400px;
 
 /* ==========================================================================
    본문 폭 / 가독성 조정
-   - 테마는 사이드바 유무와 관계없이 .page 우측에 200~300px 을 예약하므로 해제
+   - 테마는 .page 우측에도 사이드바 폭만큼(200~300px) 패딩을 예약하므로 해제하고,
+     왼쪽 사이드바를 뺀 나머지 폭을 본문이 모두 사용
    - 읽기 폭은 .page__inner-wrap 의 max-width 로 제한 (한 줄 약 60자 내외)
    ========================================================================== */
 
 @include breakpoint($large) {
-  .page {
-    width: 100%;
+  .page,
+  .archive {
+    width: calc(100% - #{$right-sidebar-width-narrow});
+    padding-inline-end: 0;
+  }
+}
+
+@include breakpoint($x-large) {
+  .page,
+  .archive {
+    width: calc(100% - #{$right-sidebar-width});
     padding-inline-end: 0;
   }
 }
@@ -39,10 +49,3 @@ $max-width: 1400px;
   table { display: block; overflow-x: auto; }
 }
 
-// 목록/아카이브 페이지도 같은 폭으로 정렬
-.archive {
-  @include breakpoint($large) {
-    width: 100%;
-    padding-inline-end: 0;
-  }
-}
