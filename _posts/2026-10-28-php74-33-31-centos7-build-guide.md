@@ -45,16 +45,46 @@ RemiリポジトリのPHP 7.4は、現行OS向けには継続してリビジョ�
 
 CentOS 7はEOLのため、標準リポジトリは **vault.centos.org** を参照する必要があります。ただしvaultは応答が不安定で403が返ることがあり、当社では国内ミラー（RIKENミラー）に切り替えました。また、`CentOS-Sources.repo` が有効だと `yum-builddep` がソースリポジトリ側で403になり失敗するため、**Sources系のリポジトリ定義は外しておきます。**
 
+具体的なセットアップは次のとおりです。EPELも7はアーカイブ行きになっているため、アーカイブ側から入れます。
+
+```bash
+# CentOS 7標準リポジトリをRIKENミラーのvaultへ向ける
+rm -f /etc/yum.repos.d/CentOS-Sources.repo
+sed -i -e 's|^mirrorlist=|#mirrorlist=|g' \
+       -e 's|^#baseurl=http://mirror.centos.org/centos/$releasever|baseurl=https://ftp.riken.jp/Linux/centos-vault/7.9.2009|g' \
+       /etc/yum.repos.d/CentOS-Base.repo
+
+# EPEL 7（アーカイブ）とRemiのリリースRPM
+yum -y install https://archives.fedoraproject.org/pub/archive/epel/7/x86_64/Packages/e/epel-release-7-14.noarch.rpm
+yum -y install https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+# epel.repoのbaseurlをアーカイブへ向ける（metalinkは無効化）
+sed -i -e 's|^metalink=|#metalink=|g' \
+       -e 's|^#baseurl=http://download.example/pub/epel/7/$basearch|baseurl=https://archives.fedoraproject.org/pub/archive/epel/7/$basearch|g' \
+       /etc/yum.repos.d/epel.repo
+
+# ビルド道具
+yum -y install rpm-build yum-utils cpio gcc gcc-c++ make
+```
+
 ### 2. SRPMは `rpm -i` せず、`rpm2cpio` で展開する
 
 ここが最初のつまずきポイントです。
 
 RemiのSRPMは **Rich Dependencies（リッチ依存関係）** を使っており、el7のrpmはこれを解釈できないため、通常の `rpm -i php-7.4.33-31.remi.src.rpm` が失敗します。
 
-回避策は単純で、SRPMをインストールせずに中身だけ取り出します。
+回避策は単純で、SRPMをインストールせずに中身だけ取り出します。SRPM自体はRemiのサイトから取得できます。
 
 ```bash
+curl -LO https://rpms.remirepo.net/SRPMS/php-7.4.33-31.remi.src.rpm
+
+mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
 rpm2cpio php-7.4.33-31.remi.src.rpm | cpio -idmv
+cp php74.spec ~/rpmbuild/SPECS/
+# spec以外の展開物（tarボール、パッチ、設定ファイル一式）をSOURCESへ
+for f in *; do
+  case "$f" in *.src.rpm|php74.spec) ;; *) mv "$f" ~/rpmbuild/SOURCES/ ;; esac
+done
 ```
 
 取り出した `.spec` ファイルを直接 `rpmbuild` に渡す形でビルドします。
@@ -69,9 +99,32 @@ el7のライブラリ事情に合わせて、specを最小限だけ変更しま�
 | oniguruma | `oniguruma5php-devel` → `oniguruma-devel`（EPELの6.8.2） | el7向けにRemi版の開発パッケージが存在しないため。実行時は `libonig.so.5` が必要です |
 | ICUのバージョン要件 | 「ICU 74以上」の要求を削除 | el7のシステムICUは50.2であり、要件を満たせないため |
 
+実際のspecでは次の3行（群）です。`sed` でそのまま置換できます。
+
+```bash
+cd ~/rpmbuild/SPECS
+# 102行目付近: %global with_libgd   1 → 0
+sed -i 's|^%global with_libgd   1|%global with_libgd   0|' php74.spec
+# BuildRequires: oniguruma5php-devel → oniguruma-devel
+sed -i 's|^BuildRequires: oniguruma5php-devel|BuildRequires: oniguruma-devel|' php74.spec
+# pkgconfig(icu-i18n / icu-io / icu-uc) の「>= 74」を削除（3行）
+sed -i -E 's|(pkgconfig\(icu-[a-z0-9-]+\))[[:space:]]*>= 74|\1|' php74.spec
+```
+
+なお、ICUの要件を残したまま `yum-builddep` を実行すると `No Package found for pkgconfig(icu-i18n) >= 74` で依存解決が止まります。el7ではこの3行の緩和が実質的に必須です。
+
 それ以外はRemiのspecそのままです。**修正をこの3点に抑えることで、「Remiの-31と同一のソース・同一のパッチセットである」ことを説明できる**のが、この方法の利点です。-31の緩和パッチ（`php-7.4-cve-2026-109618.patch`）自体はSRPMに含まれています。
 
-### 4. ビルド成果物
+### 4. 依存解決とビルド
+
+```bash
+yum-builddep -y ~/rpmbuild/SPECS/php74.spec
+rpmbuild -ba ~/rpmbuild/SPECS/php74.spec
+```
+
+`rpmbuild` はCLI/FPM/CGI/Apache/ZTSの各バリアントを順にコンパイルし、最後にPHPのテストスイート（`%check`）まで実行します。マシンの性能に大きく左右されますが、余裕を持った時間枠で実行してください。
+
+### 5. ビルド成果物
 
 - PHP関連RPM **37個**（php、php-cli、php-fpm、php-mbstring、php-intl、php-gd、php-opcache など）
 - SHA256SUMS（成果物の検証用）
@@ -86,7 +139,29 @@ el7のライブラリ事情に合わせて、specを最小限だけ変更しま�
 - `php-fpm -t` が通ること
 - RPMのchangelogに **CVE-2026-109618 / CVE-2026-109619** の修正が含まれること
 
+検証時の出力例です。
+
+```text
+$ php -v
+PHP 7.4.33 (cli) (built: Nov 23 2026 17:32:21) ( NTS )
+    with Zend OPcache v7.4.33
+
+$ php-fpm -t
+NOTICE: configuration file /etc/php-fpm.conf test is successful
+
+$ rpm -q --changelog php-common | grep CVE-2026-10961
+  CVE-2026-109618, CVE-2026-109619
+```
+
 特にchangelogの確認は重要です。EOL系統へのバックポートではバージョン番号が変わらないため、**「-31相当である」ことの根拠はパッケージ側の記録で示す**必要があります。
+
+### 再現検証について（2026年11月追記）
+
+本記事の公開にあたり、上記の手順をまっさらなCentOS 7.9環境で最初から再現し直し、全手順がそのまま通ることを確認しました。再現時の結果は次のとおりです。
+
+- 成果物：php関連RPM 35個（x86_64、debuginfo含む）
+- `%check` のテストスイート：9,069件パス、失敗10件（0.1%）。失敗はいずれも `session rfc1867` 系、`disk_free_space`、`memory_limit` といった実行環境依存のテストで、ビルド自体の不具合ではありませんでした
+- クリーン環境へのインストール、`php -v`、主要モジュール、`php-fpm -t`、changelogのCVE記載まで再確認済みです
 
 ## 適用前に必ず決めること
 
