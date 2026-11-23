@@ -160,7 +160,7 @@ PHP 7.4は2022年11月にサポートが終了しており、今回のような�
 
 ## お問い合わせ
 
-📍 **東洋インターネットサービス株式会社**: [https://tyis.co.jp/](https://tyis.co.jp/){:target="_blank"}
+📍 **東洋インターネットサービス株式会社**: [https://www.tyis.co.jp/](https://www.tyis.co.jp/){:target="_blank"}
 
 📧 **メール**: [info@tyis.co.jp](mailto:info@tyis.co.jp)
 
