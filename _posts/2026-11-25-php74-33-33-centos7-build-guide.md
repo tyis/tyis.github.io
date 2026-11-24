@@ -18,7 +18,7 @@ comments: true
 - リポジトリ: [tyis/php74-el7-build](https://github.com/tyis/php74-el7-build)
 - 成果物: [Releases v7.4.33-33](https://github.com/tyis/php74-el7-build/releases/tag/v7.4.33-33)
 
-本記事では、[-31のビルド記録](https://blog.tyis.co.jp/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E9%81%8B%E7%94%A8/php/php74-33-31-centos7-build-guide/)から変わった点に絞って解説します。基本手順（SRPMを `rpm2cpio` で展開する理由、クリーン環境での検証の考え方など）は前回記事をご覧ください。
+本記事では、[-31のビルド記録](https://blog.tyis.co.jp/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E9%81%8B%E7%94%A8/php/php74-33-31-centos7-build-guide/)から変わった点を中心に解説しますが、手順自体はこの記事だけで完結するよう、後半に全体の流れを通しで載せています。
 
 ## まず結論
 
@@ -113,6 +113,103 @@ yum swap postgresql-libs libpq5
 | oniguruma | `oniguruma5php-devel` → `oniguruma-devel` | -31から継続（EPEL） |
 | ICUのバージョン要件 | `>= 78` を削除（3行） | **汎用sedに変更** |
 | PostgreSQL | `libpq-devel` → `libpq5-devel` | **-33で新規追加** |
+
+## ビルド手順（全体の流れ）
+
+前回記事を読まなくても、この手順だけでビルドできます。同じ内容をスクリプト化したものがGitHubリポジトリの `build.sh` です。
+
+### 1. 環境を用意する
+
+ビルドはCentOS 7の中で行います。Dockerがあれば、ホストを汚さずに始められます。
+
+```bash
+# ホスト側
+docker run -it --name php74build centos:7
+```
+
+コンテナ内（root）で、まずリポジトリを整えます。CentOS 7はEOLのため標準リポジトリはvaultへ、EPELはアーカイブへ向けます。Sources系の定義が残っていると依存解決で失敗するため外しておきます。あわせて、罠2で説明したPGDGリポジトリもここで追加します。
+
+```bash
+rm -f /etc/yum.repos.d/CentOS-Sources.repo /etc/yum.repos.d/CentOS-CR.repo \
+      /etc/yum.repos.d/CentOS-Media.repo /etc/yum.repos.d/CentOS-fasttrack.repo \
+      /etc/yum.repos.d/CentOS-Debuginfo.repo /etc/yum.repos.d/CentOS-x86_64-kernel.repo
+sed -i -e 's|^mirrorlist=|#mirrorlist=|g' \
+       -e 's|^#baseurl=http://mirror.centos.org/centos/$releasever|baseurl=https://vault.centos.org/7.9.2009|g' \
+       /etc/yum.repos.d/CentOS-Base.repo
+yum clean all
+
+yum -y install https://archives.fedoraproject.org/pub/archive/epel/7/x86_64/Packages/e/epel-release-7-14.noarch.rpm \
+               https://rpms.remirepo.net/enterprise/remi-release-7.rpm
+
+# epel.repoのbaseurlをアーカイブへ（metalinkは無効化）、remi-safeはbaseurlを有効化
+sed -i -e 's|^metalink=|#metalink=|g' \
+       -e 's|^#baseurl=http://download.example/pub/epel/7/$basearch|baseurl=https://archives.fedoraproject.org/pub/archive/epel/7/$basearch|g' \
+       /etc/yum.repos.d/epel.repo
+sed -i -e '/^mirrorlist=/d' \
+       -e 's|^#baseurl=http://rpms.remirepo.net/enterprise/7/safe/$basearch/|baseurl=https://rpms.remirepo.net/enterprise/7/safe/$basearch/|' \
+       /etc/yum.repos.d/remi-safe.repo
+
+# PGDG（libpq5-develの取得元）
+cat > /etc/yum.repos.d/pgdg.repo << 'EOF'
+[pgdg15]
+name=PostgreSQL 15 for RHEL 7
+baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-7-x86_64/
+enabled=1
+gpgcheck=0
+[pgdg-common]
+name=PostgreSQL common for RHEL 7
+baseurl=https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-x86_64/
+enabled=1
+gpgcheck=0
+EOF
+
+yum -y install rpm-build yum-utils cpio gcc gcc-c++ make curl
+```
+
+### 2. SRPMは `rpm -i` せず、`rpm2cpio` で展開する
+
+RemiのSRPMはRich Dependenciesを使っており、el7のrpmではインストールできません。中身だけを取り出します。
+
+```bash
+mkdir -p ~/rpmbuild/{BUILD,RPMS,SOURCES,SPECS,SRPMS} ~/work
+cd ~/work
+curl -LO https://rpms.remirepo.net/SRPMS/php-7.4.33-33.remi.src.rpm
+rpm2cpio php-7.4.33-33.remi.src.rpm | cpio -idm
+cp php74.spec ~/rpmbuild/SPECS/
+# spec以外の展開物（tarボール、パッチ、設定ファイル一式）をSOURCESへ
+for f in *; do
+  case "$f" in *.src.rpm|php74.spec) ;; *) mv "$f" ~/rpmbuild/SOURCES/ ;; esac
+done
+```
+
+### 3. specを修正する（4か所）
+
+理由は前半の「罠1」「罠2」と表のとおりです。コマンドは次の4つです。
+
+```bash
+cd ~/rpmbuild/SPECS
+sed -i 's|^%global with_libgd   1|%global with_libgd   0|' php74.spec
+sed -i 's|^BuildRequires: oniguruma5php-devel|BuildRequires: oniguruma-devel|' php74.spec
+sed -i 's|^BuildRequires: libpq-devel|BuildRequires: libpq5-devel|' php74.spec
+sed -i -E 's|(pkgconfig\(icu-[a-z0-9-]+\))[[:space:]]*>=[[:space:]]*[0-9.]+|\1|' php74.spec
+```
+
+### 4. 依存解決とビルド
+
+```bash
+yum-builddep -y ~/rpmbuild/SPECS/php74.spec
+rpmbuild -ba ~/rpmbuild/SPECS/php74.spec
+```
+
+`rpmbuild` はCLI/FPM/CGI/Apache/ZTSの各バリアントを順にコンパイルし、最後にテストスイート（`%check`）まで実行します。マシン性能に大きく左右されるため、余裕を持った時間枠で実行してください。
+
+### 5. 成果物
+
+RPMは `~/rpmbuild/RPMS/x86_64/` に、SRPMは `~/rpmbuild/SRPMS/` に出力されます。Dockerの場合はホスト側から取り出せます。
+
+```bash
+docker cp php74build:/root/rpmbuild/RPMS ./RPMS
+```
 
 ## ビルドと検証の結果
 
