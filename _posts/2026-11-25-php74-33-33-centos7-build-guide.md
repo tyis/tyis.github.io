@@ -18,7 +18,7 @@ comments: true
 - リポジトリ: [tyis/php74-el7-build](https://github.com/tyis/php74-el7-build)
 - 成果物: [Releases v7.4.33-33](https://github.com/tyis/php74-el7-build/releases/tag/v7.4.33-33)
 
-本記事では、[-31のビルド記録](https://blog.tyis.co.jp/2026/10/28/php74-33-31-centos7-build-guide/)から変わった点に絞って解説します。基本手順（SRPMを `rpm2cpio` で展開する理由、クリーン環境での検証の考え方など）は前回記事をご覧ください。
+本記事では、[-31のビルド記録](https://blog.tyis.co.jp/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E9%81%8B%E7%94%A8/php/php74-33-31-centos7-build-guide/)から変わった点に絞って解説します。基本手順（SRPMを `rpm2cpio` で展開する理由、クリーン環境での検証の考え方など）は前回記事をご覧ください。
 
 ## まず結論
 
